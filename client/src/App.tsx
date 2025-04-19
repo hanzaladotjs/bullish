@@ -5,7 +5,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<h1 >Landing Page</h1>} />
+        <Route path="/" element={<h1>Landing Page</h1>} />
         <Route path="/explore" element={<h1>Explore Page</h1>} />
         <Route path="/:id" element={<h1>Blog Detail Page</h1>} />
         <Route path="/auth" element={<h1>Auth Page</h1>} />
