@@ -6,7 +6,7 @@
     @import "tailwindcss";
     html, body {
         background-color:  darkolivegreen;
-        color: aliceblue;
+        color: whitesmoke;
        /* font-family: 'Gill Sans', 'Gill Sans MT',  -apple-system, BlinkMacSystemFont, Calibri, 'Trebuchet MS', sans-serif;
         /* font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; */
         font-family:  ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace 
