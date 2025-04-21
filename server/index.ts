@@ -7,10 +7,12 @@ import * as dotenv from 'dotenv';
 import {Request, Response, NextFunction} from 'express';
 dotenv.config()
 import {connectDb} from './utils/db';
+import cors from "cors"
 
 const app = express();
 
 app.use(express.json())
+app.use(cors())
 
 connectDb()
 

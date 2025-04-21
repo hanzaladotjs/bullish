@@ -36,22 +36,24 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
-const auth_1 = __importDefault(require("./routes/auth"));
-const blogs_1 = __importDefault(require("./routes/blogs"));
-const dotenv = __importStar(require("dotenv"));
+var express_1 = __importDefault(require("express"));
+var auth_1 = __importDefault(require("./routes/auth"));
+var blogs_1 = __importDefault(require("./routes/blogs"));
+var dotenv = __importStar(require("dotenv"));
 dotenv.config();
-const db_1 = require("./utils/db");
-const app = (0, express_1.default)();
+var db_1 = require("./utils/db");
+var cors_1 = __importDefault(require("cors"));
+var app = (0, express_1.default)();
 app.use(express_1.default.json());
+app.use((0, cors_1.default)());
 (0, db_1.connectDb)();
-const port = process.env.PORT || 5000;
+var port = process.env.PORT || 5000;
 app.use("/api/auth", auth_1.default);
 app.use("/api/blogs", blogs_1.default);
-app.use((err, req, res, next) => {
+app.use(function (err, req, res, next) {
     console.error(err.stack);
     res.status(500).send('Something broke!');
 });
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+app.listen(port, function () {
+    console.log("Server is running on http://localhost:".concat(port));
 });

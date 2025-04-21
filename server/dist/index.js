@@ -32,26 +32,28 @@ var __importStar = (this && this.__importStar) || (function () {
         return result;
     };
 })();
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Blog = void 0;
-var mongoose = __importStar(require("mongoose"));
-var blogSchema = new mongoose.Schema({
-    title: {
-        type: String,
-        required: true,
-    },
-    description: {
-        type: String,
-        required: true,
-    },
-    content: {
-        type: String,
-        required: true,
-    },
-    author: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "user",
-        required: true,
-    },
+const express_1 = __importDefault(require("express"));
+const auth_1 = __importDefault(require("./routes/auth"));
+const blogs_1 = __importDefault(require("./routes/blogs"));
+const dotenv = __importStar(require("dotenv"));
+dotenv.config();
+const db_1 = require("./utils/db");
+const cors_1 = __importDefault(require("cors"));
+const app = (0, express_1.default)();
+app.use(express_1.default.json());
+app.use((0, cors_1.default)());
+(0, db_1.connectDb)();
+const port = process.env.PORT || 5000;
+app.use("/api/auth", auth_1.default);
+app.use("/api/blogs", blogs_1.default);
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
 });
-exports.Blog = mongoose.model("Blog", blogSchema);
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
