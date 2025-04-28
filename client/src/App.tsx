@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import LandingPage from './pages/LandingPage';
 import { Explore } from './pages/ExplorePage';
 import { SeeBlog } from './pages/SeeBlog';
+import React from 'react';
 
 function App() {
   return (

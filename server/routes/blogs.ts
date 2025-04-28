@@ -47,7 +47,7 @@ router.post(
 // gimme blog by id
 router.get("/:id", async (req: Request, res: Response): Promise<any> => {
     try {
-      const blog = await Blog.findById(req.params.id).populate("author", "username");
+      const blog = await Blog.findById(req.params.id).populate("username");
       if (!blog) {
         res.status(404).json({ message: "Blog not found" });
         return;

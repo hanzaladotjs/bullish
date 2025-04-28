@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const Explore = () => {
     const [blogs, setBlogs] = useState<any[]>([]);
@@ -31,7 +32,10 @@ export const Explore = () => {
             <ul>
               {blogs.map((blog) => (
                 <li key={blog._id} className="mb-2 border p-5 hover:bg-black">
-                  {blog.title || 'Untitled'}
+            <Link to={`/${blog._id}`}>
+            
+                {blog.title}
+            </Link>
                 </li>
               ))}
             </ul>
