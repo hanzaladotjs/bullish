@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -25,13 +25,13 @@ export const Explore = () => {
 
     return (
         <div className="p-4">
-          <h1 className="text-3xl mb-4 text-black">hey! explorer</h1>
+          <h1 className="text-3xl mb-4">hey! explorer</h1>
           {blogs.length === 0 ? (
             <p>No blogs available.</p>
           ) : (
             <ul>
               {blogs.map((blog) => (
-                <li key={blog._id} className="mb-2 border p-5 hover:bg-black">
+                <li key={blog._id} className="mb-2 border p-5 hover:bg-white">
             <Link to={`/${blog._id}`}>
             
                 {blog.title}

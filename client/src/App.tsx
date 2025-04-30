@@ -3,7 +3,11 @@ import Navbar from './components/Navbar';
 import LandingPage from './pages/LandingPage';
 import { Explore } from './pages/ExplorePage';
 import { SeeBlog } from './pages/SeeBlog';
-import React from 'react';
+
+import { SignIn } from './pages/SignIn';
+import { SignUp } from './pages/SignUp';
+// import { Footer } from './components/Footer';
+ 
 
 function App() {
   return (
@@ -13,10 +17,11 @@ function App() {
         <Route path="/" element={<LandingPage></LandingPage>}></Route>
         <Route path="/explore" element={<Explore></Explore>} />
         <Route path="/:id" element={<SeeBlog></SeeBlog>} />
-        <Route path="/auth/signin" element={<h1>sign in</h1>} />
-        <Route path="/auth/signup" element={<h1>sign up</h1>} />
+        <Route path="/auth/signin" element={<SignIn></SignIn>} />
+        <Route path="/auth/signup" element={<SignUp></SignUp>} />
         <Route path="/new" element={<h1>New Blog Page</h1>} />
       </Routes>
+      {/* <Footer></Footer> */}
     </Router>
   );
 }
