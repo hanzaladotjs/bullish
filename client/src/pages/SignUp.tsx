@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 export const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -7,34 +8,37 @@ export const SignUp = () => {
   const handleSubmit = () => {
     console.log("hi");
   };
-
   return (
     <div className="flex justify-center items-center min-h-150">
-      <div className="flex flex-col px-80 py-20 max-w-md w-full border-4 justify-center items-center text-black rounded-2xl">
+      <div className=" border-2 md:border-4 flex  flex-col md:px-80 md:py-20 px-8 py-15 md:max-w-md md:w-full justify-center items-center text-black rounded-2xl">
         {" "}
-        <h1 className="mb-10  text-2xl">SignUp</h1>
-        <form onSubmit={handleSubmit}>
+        <h1 className="mb-5 md:mb-10 md:text-3xl text-2xl">SignUp</h1>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-2 ">
           <input
-            className="mb-2 border-2 px-5 py-2  "
+            className=" border md:border-2   px-4 md:px-5 md:py-2"
             type="text"
             placeholder="username"
             value={username}
           />
           <input
-            className="mb-2 border-2 px-5 py-2"
+            className=" border md:border-2  mb-2 px-4  md:px-5 md:py-2"
             type="text"
             placeholder="email"
             value={email}
           />
           <input
-            className=" border-2 px-5 py-2"
+            className=" border md:border-2   px-4 md:px-5 md:py-2"
             type="text"
             placeholder="password"
             value={password}
           />
-          <button type="submit" className="mt-10 ml-18 px-3 py-2 border-2">signin</button>
         </form>
-        
+        <button
+          type="submit"
+          className="mt-5 px-3 border md:px-3 md:py-2 rounded-sm "
+        >
+          signin
+        </button>
       </div>
     </div>
   );
