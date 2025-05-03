@@ -21,7 +21,7 @@ export const Explore = () => {
       fetchData();
     }, []);
 
-    if (loading) return <h1>Loading...</h1>;
+    if (loading) return <h1 className="flex justify-center items-center min-h-120">Loading...</h1>;
 
     return (
         <div className="p-4">

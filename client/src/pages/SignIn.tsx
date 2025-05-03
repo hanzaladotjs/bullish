@@ -9,8 +9,9 @@ export const SignIn = () => {
   };
   return (
     <div className="flex justify-center items-center min-h-150">
-      <div className=" border-2 md:border-4 flex  flex-col md:px-80 md:py-20 px-8 py-15 md:max-w-md md:w-full justify-center items-center text-black rounded-2xl">
+      <div className=" border-black border-2 hover:border-4 md:border-4 flex bg-gray-600 text-yellow-300 flex-col hover:md:px-80 hover:md:py-20 px-8 py-15 md:max-w-md md:w-full justify-center items-center text-black rounded-2xl">
         {" "}
+        
         <h1 className="mb-5 md:mb-10 md:text-3xl text-2xl">SignIn</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-2 ">
           <input
@@ -32,7 +33,7 @@ export const SignIn = () => {
         </form>
         <button
             type="submit"
-            className="mt-5 px-3 border md:px-3 md:py-2 rounded-sm "
+            className="mt-5 px-3 border hover:border-2 md:px-3 md:py-2 rounded-sm "
           >
             signin
           </button>
