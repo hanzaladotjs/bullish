@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,27 +22,27 @@ const Navbar = () => {
         aria-label="Toggle menu"
       >
         {!isOpen ? "|||" : "^"}
-         
       </button>
 
       {/* Navigation Links */}
       <div
         className={`${
           isOpen ? "flex" : "hidden"
-        } md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-7 absolute md:text-3xl text-xl md:static top-20 right-0  md:w-auto md:bg-transparent p-5 md:p-0 z-10 shadow-md md:shadow-none`}
+        } md:flex flex-col md:flex-row md:mt-0 mt-45 mr-18 md:space-y-0 md:space-x-7 absolute text-center md:text-3xl text-2xl  md:static top-20 right-0  md:w-auto md:bg-transparent bg-[#deb887] md:text-gray-700 md:p-0 z-10 shadow-md md:shadow-none`}
       >
-        <div className="md:hover:tracking-widest ">
+        <div className=" px-30 border-2 py-11 md:p-0 border-black hover:text-3xl  md:border-none border rounded-3xl ">
           <Link to="/explore" onClick={() => setIsOpen(false)}>
-            explore 
+            explore
           </Link>
         </div>
-        <div className="md:hover:tracking-widest">
+
+        <div className=" md:p-0 border-2 px-30 border-black py-11  hover:text-3xl md:border-none border rounded-3xl">
           <Link to="/auth/signup" onClick={() => setIsOpen(false)}>
-            signup 
+            signup
           </Link>
-         
         </div>
-        <div className="md:hover:tracking-widest">
+
+        <div className=" px-30 py-11 border-2 border-black md:p-0  hover:text-3xl  md:border-none border rounded-3xl">
           <Link to="/auth/signin" onClick={() => setIsOpen(false)}>
             signin
           </Link>

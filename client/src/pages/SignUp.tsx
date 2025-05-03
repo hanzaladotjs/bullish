@@ -5,8 +5,8 @@ export const SignUp = () => {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
 
-  const handleSubmit = () => {
-    console.log("hi");
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
   };
   return (
     <div className="flex justify-center items-center min-h-150">
@@ -19,18 +19,21 @@ export const SignUp = () => {
             type="text"
             placeholder="username"
             value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
           <input
             className=" border md:border-2  mb-2 px-4  md:px-5 md:py-2"
             type="text"
             placeholder="email"
             value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input
             className=" border md:border-2   px-4 md:px-5 md:py-2"
             type="text"
             placeholder="password"
             value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </form>
         <button

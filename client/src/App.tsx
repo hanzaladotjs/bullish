@@ -13,6 +13,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+     
       <Routes>
         <Route path="/" element={<LandingPage></LandingPage>}></Route>
         <Route path="/explore" element={<Explore></Explore>} />
