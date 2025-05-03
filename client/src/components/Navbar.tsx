@@ -31,21 +31,21 @@ const Navbar = () => {
       <div
         className={`${
           isOpen ? "flex" : "hidden"
-        } md:flex flex-col md:flex-row md:mt-0 mt-45 mr-18 md:space-y-0 md:space-x-7 absolute text-center md:text-3xl text-2xl font-mono md:static top-20 right-0  md:w-auto md:bg-transparent md:bg-transparent bg-[#deb887] md:text-gray-700 md:p-0 z-10 shadow-md md:shadow-none`}
+        } md:flex flex-col md:flex-row md:mt-0 mt-45 mr-18 md:bg-[#deb887] text-yellow-300  md:text-gray-700 bg-gray-600 md:space-y-0 md:space-x-7 absolute text-center md:text-3xl text-2xl font-mono md:static top-20 right-0  md:w-auto   md:text-gray-700 md:p-0 z-10 shadow-md md:shadow-none`}
       >
-        <div className=" px-30 border-2 py-11 md:p-0 hover:border-white  bg-gray-600 text-yellow-300 border-black md:border-none border rounded-2xl ">
+          <div className=" px-30 border-2 py-11 md:p-0 hover:border-white   border-black md:border-none border rounded-2xl ">
           <Link to="/explore" onClick={() => setIsOpen(false)}>
             explore
           </Link>
         </div>
 
-        <div className=" md:p-0 border-2 px-30 hover:border-white py-11  bg-gray-600 text-yellow-300 border-black md:border-none border rounded-2xl">
+        <div className=" md:p-0 border-2 px-30 hover:border-white py-11   border-black md:border-none border rounded-2xl">
           <Link to="/auth/signup" onClick={() => setIsOpen(false)}>
             signup
           </Link>
         </div>
 
-        <div className=" px-30 py-11 border-2 hover:border-white bg-gray-600 text-yellow-300 md:p-0 border-black md:border-none border rounded-2xl">
+        <div className=" px-30 py-11 border-2 hover:border-white  md:p-0 border-black md:border-none border rounded-2xl">
           <Link to="/auth/signin" onClick={() => setIsOpen(false)}>
             signin
           </Link>
