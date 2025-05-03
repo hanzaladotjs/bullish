@@ -8,7 +8,7 @@ export const SignIn = () => {
     e.preventDefault();
   };
   return (
-    <div className="flex justify-center items-center min-h-150">
+    <div className="flex justify-center items-center min-h-100 md:min-h-150">
       <div className=" border-black border-2 hover:border-4 md:border-4 flex bg-gray-600 text-yellow-300 flex-col hover:md:px-80 hover:md:py-20 px-8 py-15 md:max-w-md md:w-full justify-center items-center text-black rounded-2xl">
         {" "}
         

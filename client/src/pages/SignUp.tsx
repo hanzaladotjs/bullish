@@ -9,7 +9,7 @@ export const SignUp = () => {
     e.preventDefault()
   };
   return (
-    <div className="flex justify-center items-center min-h-150">
+    <div className="flex justify-center items-center min-h-100 md:min-h-150">
       <div className="border-black border-2 md:border-4  bg-gray-600 text-yellow-300 hover:border-4 flex  flex-col hover:md:px-80 hover:md:py-20 px-8 py-15 md:max-w-md md:w-full justify-center items-center text-black rounded-2xl">
         {" "}
         <h1 className="mb-5 md:mb-10 md:text-3xl text-2xl">SignUp</h1>
