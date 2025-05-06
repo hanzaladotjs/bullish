@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <div className=" flex justify-center items-center flex-col min-h-100 md:min-h-150">
-      <div className="pl-5 mb-7 r md:text-5xl text-2xl ">
+      <div className="pl-5 mb-7 md:text-5xl text-2xl ">
         You gotta be enough bullish,
         before you start writing here.
       </div>
